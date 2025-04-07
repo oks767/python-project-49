@@ -3,3 +3,9 @@
 
 ### Video on youtube with brain_games
 https://youtu.be/06Djs5oPlQs 
+
+### GCD link
+https://youtu.be/7skuvzFPcyM
+
+### Progression
+https://youtu.be/su1HaOIkxgg
