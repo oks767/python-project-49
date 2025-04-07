@@ -1,9 +1,10 @@
 import random
+from brain_games.cli import welcome_user
 from brain_games.games.brain_progression import generate_arithmetic_progression, hide_element
 import prompt
 
 def main():
-    
+    welcome_user()
     # Генерация параметров прогрессии
     start = random.randint(1, 10)  # Первый элемент
     step = random.randint(1, 5)    # Разность прогрессии

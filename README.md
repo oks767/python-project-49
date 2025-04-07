@@ -9,3 +9,6 @@ https://youtu.be/7skuvzFPcyM
 
 ### Progression
 https://youtu.be/su1HaOIkxgg
+
+### Prime
+https://youtu.be/PIaFvYSjWtw
