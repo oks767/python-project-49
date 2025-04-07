@@ -7,12 +7,12 @@ run:
 brain-games:
 	uv run brain-games
 
-lint:
-	uv run ruff check
-
 check: test lint
 
 build:
 	uv build
+
+lint:
+	uv run ruff check brain_games
 
 .PHONY: install test lint selfcheck check build
