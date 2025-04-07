@@ -1,10 +1,9 @@
-import prompt
+from brain_games.cli import welcome_user
+from brain_games.scripts.brain_even import is_even
+import random
 
 
 def main():
     print('Welcome to the Brain Games!')
-
-
-def name():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    welcome_user()
+    is_even(random.randint(1, 100))
