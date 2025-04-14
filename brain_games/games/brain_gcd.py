@@ -1,5 +1,6 @@
-import prompt
 import math
+
+import prompt
 
 
 def play_game(num1, num2):
@@ -14,4 +15,6 @@ def play_game(num1, num2):
     if user_answer == correct_answer:
         print("Correct!")
     else:
-        print(f"{user_answer} is wrong answer ;(. Correct answer was {correct_answer}. Let's try again!")
+        print(f"{user_answer} is wrong answer ;(. "
+    f"Correct answer was {correct_answer}. "
+    f"Let's try again!")

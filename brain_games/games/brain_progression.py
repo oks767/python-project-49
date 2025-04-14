@@ -1,7 +1,10 @@
 import random
+
+
 def generate_arithmetic_progression(start, step, length):
     """Генерирует арифметическую прогрессию."""
     return [start + step * i for i in range(length)]
+
 
 def hide_element(sequence):
     """Заменяет случайный элемент последовательности на '..'."""

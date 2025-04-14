@@ -19,7 +19,8 @@ def is_prime(number):
 				correct_answer = False
 				break
 
-	if (answer.lower() == 'yes' and correct_answer) or (answer.lower() == 'no' and not correct_answer):
+	if ((answer.lower() == 'yes' and correct_answer) or
+    (answer.lower() == 'no' and not correct_answer)):
 		print("Correct!")
 	else:
 		correct_response = "yes" if correct_answer else "no"
