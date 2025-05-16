@@ -1,8 +1,6 @@
-import random
-
-from brain_games.games.brain_even import is_even
+from brain_games.cli import welcome_user
 
 
 def main():
     print('Welcome to the Brain Games!')
-    is_even()
+    welcome_user()
