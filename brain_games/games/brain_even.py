@@ -1,17 +1,22 @@
 import prompt
+import random
 
+def is_even():
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    correct_answers = 0
 
-def is_even(number):
-	print('Answer "yes" if the number is even, otherwise answer "no".')
-	print(f'Question: {number}')
-	answer = prompt.string('Your answer: ')
-	if (
-    (number % 2 == 0 and answer.lower() == 'yes') or
-    (number % 2 != 0 and answer.lower() == 'no')
-):
-		print('Correct!')
-	else:
-		print(f'Wrong! The correct answer was '
-    f'{"yes" if number % 2 == 0 else "no"}.')
-		print('Let\'s try again!')
-		return True
+    while correct_answers < 3:
+        number = random.randint(1, 100)
+        print(f'Question: {number}')
+        answer = prompt.string('Your answer: ').lower()
+        correct = 'yes' if number % 2 == 0 else 'no'
+        if answer == correct:
+            print('Correct!')
+            correct_answers += 1
+        else:
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+            print(f"Let's try again, {name}!")
+            return
+    print(f'Congratulations, {name}!')
