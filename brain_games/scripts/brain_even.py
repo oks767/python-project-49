@@ -1,4 +1,3 @@
-from brain_games.cli import welcome_user
 from brain_games.games.brain_even import is_even
 
 

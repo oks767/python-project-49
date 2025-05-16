@@ -1,5 +1,7 @@
-import prompt
 import random
+
+import prompt
+
 
 def is_even():
     name = prompt.string('May I have your name? ')
@@ -16,7 +18,10 @@ def is_even():
             print('Correct!')
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+            print(
+                f"'{name}' is wrong answer ;(. "
+                f"Correct answer was '{answer}'."
+            )
             print(f"Let's try again, {name}!")
             return
     print(f'Congratulations, {name}!')

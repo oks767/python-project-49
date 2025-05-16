@@ -1,6 +1,9 @@
 import random
+
 import prompt
+
 from brain_games.cli import welcome_user
+
 
 def is_prime(n):
     if n < 2:
@@ -9,6 +12,7 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
 
 def play_game():
     name = welcome_user()
@@ -25,7 +29,10 @@ def play_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'."
+            )
             print(f"Let's try again, {name}!")
             return
     print(f"Congratulations, {name}!")
