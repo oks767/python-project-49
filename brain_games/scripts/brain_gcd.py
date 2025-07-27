@@ -1,6 +1,5 @@
-from brain_games.games.brain_gcd import play_game
+from brain_games.games.brain_gcd import main
 
-
-def main():
+def main_script():
     print('Welcome to the Brain Games!')
-    play_game()
+    main()

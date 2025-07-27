@@ -1,27 +1,14 @@
 import random
+from .core import play_game
 
-import prompt
+def get_question_and_answer():
+    number = random.randint(1, 100)
+    question = str(number)
+    correct_answer = 'yes' if number % 2 == 0 else 'no'
+    return question, correct_answer
 
-
-def is_even():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    correct_answers = 0
-
-    while correct_answers < 3:
-        number = random.randint(1, 100)
-        print(f'Question: {number}')
-        answer = prompt.string('Your answer: ').lower()
-        correct = 'yes' if number % 2 == 0 else 'no'
-        if answer == correct:
-            print('Correct!')
-            correct_answers += 1
-        else:
-            print(
-                f"'{name}' is wrong answer ;(. "
-                f"Correct answer was '{answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            return
-    print(f'Congratulations, {name}!')
+def main():
+    play_game(
+        'Answer "yes" if the number is even, otherwise answer "no".',
+        get_question_and_answer
+    )

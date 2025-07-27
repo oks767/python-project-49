@@ -1,6 +1,5 @@
-from brain_games.games.brain_even import is_even
+from brain_games.games.brain_even import main
 
-
-def main():
+def main_script():
     print('Welcome to the Brain Games!')
-    is_even()
+    main()
