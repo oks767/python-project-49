@@ -1,6 +1,10 @@
 import random
 from .core import play_game
 
+RANDOM_START_NUMBER=1
+RANDOM_STEP_NUMBER=5
+RANDOM_LENGTH_NUMBER=10
+
 def generate_arithmetic_progression(start, step, length):
     return [start + step * i for i in range(length)]
 
@@ -11,9 +15,9 @@ def hide_element(sequence):
     return sequence, hidden_value
 
 def get_question_and_answer():
-    start = random.randint(1, 10)
-    step = random.randint(1, 5)
-    length = random.randint(5, 10)
+    start = random.randint(RANDOM_START_NUMBER, RANDOM_LENGTH_NUMBER)
+    step = random.randint(RANDOM_START_NUMBER, RANDOM_STEP_NUMBER)
+    length = random.randint(RANDOM_START_NUMBER, RANDOM_LENGTH_NUMBER)
     progression = generate_arithmetic_progression(start, step, length)
     modified_sequence, hidden_value = hide_element(progression[:])
     question = " ".join(map(str, modified_sequence))

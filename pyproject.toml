@@ -1,11 +1,15 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "Brain games"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "prompt>=0.4.1",
+]
+
+authors = [
+    { name="Oksana Aleksandrova, email="oksanalex98@gmail.com" },
 ]
 
 [build-system]

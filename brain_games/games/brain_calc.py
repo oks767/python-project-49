@@ -1,9 +1,9 @@
 import random
-from .core import play_game
+from constants import RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER
 
 def get_question_and_answer():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
+    num1 = random.randint(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER)
+    num2 = random.randint(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER)
     operation = random.choice(['+', '-', '*'])
     question = f"{num1} {operation} {num2}"
     if operation == '+':
@@ -14,8 +14,3 @@ def get_question_and_answer():
         correct_answer = num1 * num2
     return question, str(correct_answer)
 
-def main():
-    play_game(
-        'What is the result of the expression?',
-        get_question_and_answer
-    )

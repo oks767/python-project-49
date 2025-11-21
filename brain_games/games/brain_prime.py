@@ -1,5 +1,6 @@
 import random
 from .core import play_game
+from constants import RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER
 
 def is_prime(n):
     if n < 2:
@@ -10,7 +11,7 @@ def is_prime(n):
     return True
 
 def get_question_and_answer():
-    number = random.randint(1, 100)
+    number = random.randint(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER)
     question = str(number)
     correct_answer = 'yes' if is_prime(number) else 'no'
     return question, correct_answer

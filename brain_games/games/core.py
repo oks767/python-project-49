@@ -6,7 +6,7 @@ def play_game(game_description, get_question_and_answer):
     print(game_description)
     correct_answers = 0
 
-    while correct_answers < 3:
+    for correct_answer in range(3):
         question, correct_answer = get_question_and_answer()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ').lower()
